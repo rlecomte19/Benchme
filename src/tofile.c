@@ -1,23 +1,32 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include "tofile.c"
 
-void tofile(int sorted[]){
+int main()
+{
+	int test[] = { 1,2,3,4,5 };
     FILE* file = NULL;
 
     file = fopen("result.csv", "a+");
     if(file != NULL){
         // Test ouverture fichier et action réalisées
-        size_t lenSorted = sizeof(sorted)/sizeof(int);
+        int lenSorted = (int) sizeof(test)/sizeof(int);
         //size_t lenExec = sizeof(executionTime)/sizeof(double);  double executionTime[]
 
-        fputs("Tableaux triés\n", file);
+        fputs("Tableaux triés;Sortie m/s", file);
         for(int i=0; i<lenSorted;i++){
-            fputc(sorted[i], file);
-            fputc('\n', file);
+            fprintf(file,"%d", test[i]);
+        }
+		// TODO
+		/*
+			replacer le curseur en haut du fichier
+			sauter une ligne
+			déclaer avec ; 
+
+		*/
+		for(int i=0; i<lenSorted;i++){
+            fprintf(file,";%d", test[i]);
         }
     }else{
         printf("L'ouverture du fichier a echouee..");
-
     }
-
 }
