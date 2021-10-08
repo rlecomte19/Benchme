@@ -1,1 +1,1 @@
-void tofile(float *test);
+void tofile(float *test, int lenSorted);
