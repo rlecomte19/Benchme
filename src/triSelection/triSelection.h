@@ -1,1 +1,1 @@
-void triSelection(float *tab, int size);
+float *triSelection(float *tableau, int size);
