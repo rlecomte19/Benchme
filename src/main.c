@@ -3,11 +3,21 @@
 #include "triSelection/triSelection.h"
 #include "tofile/tofile.h"
 #include "tri_a_bulle/tri_a_bulle.h"
+#include "test/test.h"
 
 float *randomFloatArray(int tabsize);
 
 int main()
 {
+	
+	float test[] = { 1,2,3,4.2 };
+
+	//getCpu(test, timeTaken);
+
+
+	int lenSorted = (int) sizeof(test)/sizeof(float);
+	tofile(test, lenSorted);
+	printf("Hello World!\n");
 	//tri_a_bulle();
 
 	float *tab;
@@ -16,11 +26,14 @@ int main()
 	
 	// tri par sélection 
 	for(int i = 0; i < 7 ;i++){
+		tab = randomFloatArray(10);
+	}
+	for(int i = 0; i < 10 ;i++){
 		printf("%.0f ", tab[i]);
 	}
 	printf("\n");
-	tab = triSelection(tab, 7);
-	for(int i = 0; i < 7 ;i++){
+	tab = triSelection(tab, 10);
+	for(int i = 0; i < 10 ;i++){
 		printf("%.0f ", tab[i]);
 	}
 	printf("\n");
@@ -42,14 +55,4 @@ int main()
 	// tri par insertion 
 
 
-}
-
-/* Génération d'une chaine de float aléatoire */
-float *randomFloatArray(int tabsize){ 
-	float *tabFloat = malloc(sizeof(float)*tabsize);
-	float a = 10000000.0;
-	for(int i=0; i<tabsize; i++){
-		tabFloat[i] = ((float)rand()/(float)(RAND_MAX)*a);
-	}
-	return tabFloat;
 }
