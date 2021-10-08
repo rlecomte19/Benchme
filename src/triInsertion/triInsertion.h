@@ -1,0 +1,1 @@
+float *triInsertion(float *tableau, int size);
