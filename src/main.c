@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "triSelection/triSelection.h"
+#include "tofile/tofile.h"
 
 float *randomFloatArray(int tabsize);
 
