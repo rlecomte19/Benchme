@@ -1,20 +1,15 @@
-#include <stdio.h>
-#include "tofile.c"
-
-int main()
-{
-	int test[] = { 1,2,3,4,5 };
+void tofile(float *test){
     FILE* file = NULL;
 
     file = fopen("result.csv", "a+");
     if(file != NULL){
         // Test ouverture fichier et action réalisées
-        int lenSorted = (int) sizeof(test)/sizeof(int);
+        float lenSorted = (float) sizeof(test)/sizeof(float);
         //size_t lenExec = sizeof(executionTime)/sizeof(double);  double executionTime[]
 
         fputs("Tableaux triés;Sortie m/s", file);
         for(int i=0; i<lenSorted;i++){
-            fprintf(file,"%d", test[i]);
+            fprintf(file,"%f", test[i]);
         }
 		// TODO
 		/*
@@ -24,7 +19,7 @@ int main()
 
 		*/
 		for(int i=0; i<lenSorted;i++){
-            fprintf(file,";%d", test[i]);
+            fprintf(file,";%f", test[i]);
         }
     }else{
         printf("L'ouverture du fichier a echouee..");
