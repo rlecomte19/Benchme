@@ -1,0 +1,1 @@
+float *tri_a_bulle(float *tabInit, int nNbVal);
