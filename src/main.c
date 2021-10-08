@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include "triSelection/triSelection.h"
 #include "tofile/tofile.h"
-
-float *randomFloatArray(int tabsize);
+#include "test/test.h"
 
 int main()
 {
@@ -22,13 +21,13 @@ int main()
 
 	// tri par sélection 
 	float *tab;
-	tab = randomFloatArray(7);
-	for(int i = 0; i < 7 ;i++){
+	tab = randomFloatArray(10);
+	for(int i = 0; i < 10 ;i++){
 		printf("%.0f ", tab[i]);
 	}
 	printf("\n");
-	tab = triSelection(tab, 7);
-	for(int i = 0; i < 7 ;i++){
+	tab = triSelection(tab, 10);
+	for(int i = 0; i < 10 ;i++){
 		printf("%.0f ", tab[i]);
 	}
 	printf("\n");
@@ -39,14 +38,4 @@ int main()
 	// tri par insertion 
 
 
-}
-
-/* Génération d'une chaine de float aléatoire */
-float *randomFloatArray(int tabsize){ 
-	float *tabFloat = malloc(sizeof(float)*tabsize);
-	float a = 10000000.0;
-	for(int i=0; i<tabsize; i++){
-		tabFloat[i] = ((float)rand()/(float)(RAND_MAX)*a);
-	}
-	return tabFloat;
 }
