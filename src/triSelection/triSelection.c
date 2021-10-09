@@ -17,4 +17,6 @@ float *triSelection(float *tableau, int size){
         }
     }
     return tab;
+
+    
 }

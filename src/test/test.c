@@ -16,4 +16,5 @@ float *randomFloatArray(int tabsize){
 		tabFloat[i] = ((float)rand()/(float)(RAND_MAX)*a);
 	}
 	return tabFloat;
-}
+	
+} 
