@@ -17,4 +17,12 @@ float *randomFloatArray(int tabsize){
 	}
 	return tabFloat;
 	
-} 
+}
+
+void tri_test(float *listArray[], float (*func)(float*,int), int *tabSizes){
+	for (int i=0;i<=5;i++){
+		for(int j=0;j<=5;j++){
+			func(listArray[i], tabSizes[i]);
+		}
+	}
+}
