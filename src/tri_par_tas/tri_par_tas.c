@@ -15,31 +15,41 @@ float *tas(float *tab,int nIndice, int nNbVal)
             fTemp = tab[nPosition];
             tab[nPosition] = tab[nIndice];
             tab[nIndice] = fTemp;
+
+            nIndice = nPosition;
+            nPosition = 2 * nIndice;
         }
         else
         {
-            nPosition +=1;
+            nPosition = nNbVal+1;
         }
     }
+
 }
 
-//float *tri_a_bulle(float *tablInit)
 float *tri_par_tas(float *tabInit, int nNbVal)
 {
     float fTemp;
-    printf("\nTri par tas\n");
-
-    for(int nI = nNbVal/2; nI > 0; nI--)
+    printf("Tri par tas\n");
+    for(int nI = nNbVal/2; nI >= 0; nI--)
     {
+
         tas(tabInit, nI, nNbVal);
     }
-    for(int nI = nNbVal; nI > 0; nI--)
-    {
+    for(int nI = nNbVal-1; nI >= 1; nI--)
+    {        
         fTemp = tabInit[nI];
-        tabInit[nI] = tabInit[0];
-        tabInit[0] = fTemp;
-        tas(tabInit, 0, nI-1);
+        tabInit[nI] = tabInit[1];
+        tabInit[1] = fTemp;
+        tas(tabInit, 1, nI-1);
     }
+
+    float fLast = tabInit[0];
+    for(int nI=0; nI < nNbVal; nI++)
+    {
+        tabInit[nI] = tabInit[nI+1];
+    }
+    tabInit[nNbVal-1] = fLast;
 
     return tabInit;
 }
