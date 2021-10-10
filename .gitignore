@@ -1,6 +1,2 @@
 .vscode
-./src/main.o
-./output
-./src/tri_a_bulle.o
-./src/tofile/tofile.o
-./src/triSelection/triSelection.o
+*.o
