@@ -1,6 +1,6 @@
 #include <time.h>
 #include <math.h>
-#include "./test/test.h"
+#include "../test/test.h"
 
 void getCpu(float *listArray[], float (*func)(float*,int), int *tabSizes, double *timeTaken){
     clock_t start, end;

@@ -21,21 +21,22 @@ int main()
 	int tabSizes[6] = {100, 1000, 10000, 100000, 1000000, 10000000};
 	float *listArrays[6] = {arr1, arr2, arr3, arr4, arr5, arr6}; 
 
-	float a = 10000000.0;
-	for(int i=0; i<6; i++){
-		for (int j = 0; j < tabSizes[i]; j++)
-		{		
-			listArrays[i][j] = (float)(rand() % 10000000);
-		}
-	}
-
+	// float a = 10000000.0;
+	// for(int i=0; i<6; i++){
+	// 	for (int j = 0; j < tabSizes[i]; j++)
+	// 	{		
+	// 		listArrays[i][j] = (float)(rand() % 10000000);
+	// 	}
+	// }
+	tri_test(listArrays, triSelection, tabSizes);
 	// Remplissage aléatoire des tableaux de différent nombre de valeurs
 	// randomFloatArray(listArrays, tabSizes, 6);
-	for (int i = 0; i < 6; i++)
-	{
-		for (int j = 0; j < tabSizes[i]; j++)
-		{
-			printf("%.01f | ", listArrays[0][j]);
-		}
-	}
+
+	// for (int i = 0; i < 6; i++)
+	// {
+	// 	for (int j = 0; j < tabSizes[i]; j++)
+	// 	{
+	// 		printf("%.01f | ", listArrays[0][j]);
+	// 	}
+	// }
 }
