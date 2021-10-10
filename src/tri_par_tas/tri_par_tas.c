@@ -27,6 +27,13 @@ float *tas(float *tab,int nIndice, int nNbVal)
 
 }
 
+/**
+ * @brief Algorithme de tri par tas
+ * 
+ * @param tabInit Tableau non trié
+ * @param nNbVal Nombre de valeurs dans le tableau
+ * @return Tableau trié
+ */
 float *tri_par_tas(float *tabInit, int nNbVal)
 {
     float fTemp;

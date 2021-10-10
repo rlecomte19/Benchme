@@ -1,17 +1,17 @@
 #include <stdio.h>
 
+/**
+ * @brief Algorithme de tri à bulle
+ * 
+ * @param tabInit Tableau non trié
+ * @param nNbVal Nombre de valeurs dans le tableau
+ * @return Tableau trié
+ */
 //float *tri_a_bulle(float *tablInit)
 float *tri_a_bulle(float *tabInit, int nNbVal)
 {
     printf("Tri a bulle\n");
-    //int nNbVal = 10;
-    /*
-    for(int nJ=0; nJ<nNbVal; nJ++)
-        printf("%.0f - ", tabInit[nJ]);
-    printf("\n");
-    */
 
-    //float tabInit[10] = { 15, 4, 16, 2, 500, 14.3, 48, 1250, 46, 1300};
     int nI = 0;
     float fTemp;
     int ntabTrie = 0 ;
@@ -29,14 +29,7 @@ float *tri_a_bulle(float *tabInit, int nNbVal)
             }
         }
         nI = 0;
-        //ntabTrie = 1;
-        //nI++;
+
     }
-    /*
-    for(int nJ=0; nJ<nNbVal; nJ++)
-        printf("%.0f - ", tabInit[nJ]);
-    */
-    
-    //printf("%f", tabInit);
     return tabInit;
 }
