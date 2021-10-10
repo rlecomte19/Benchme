@@ -7,7 +7,7 @@
  * @param nNbVal Nombre de valeurs dans le tableau
  * @return Tableau trié
  */
-//float *tri_a_bulle(float *tablInit)
+
 float *tri_a_bulle(float *tabInit, int nNbVal)
 {
     printf("Tri a bulle\n");
